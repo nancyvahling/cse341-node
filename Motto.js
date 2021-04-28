@@ -1,35 +1,83 @@
-alert ("What is your favorite Motto?")
 
-var person = prompt("Please enter your favorite Motto");
-let txt;
-if (person == null || person == "") {
-    txt = "User cancelled the prompt.";
-} else {
-txt = "{} is a nice Motto". format(favorite_motto);
+//  function getMotto() {
+//     let userPhrase = prompt("Please enter your favorite Motto to live by");
+//     return userPhrase;
+     
+//  }
+//  function getCount(userMotto) {
+//      let userCount = prompt("Please enter the amount of times you would like to see" + userMotto + "your motto:");
+//      return parseFloat(userCount);
+//  }
+// function playAgain() {
+// let playAgainString = prompt("Would you like to play again (y/n)?");
+
+// if(playAgainString === "y") {
+// playGame();
+// } else {
+// alert("Thanks for playing!");
+// }
+// function printMotto(motto, count) {
+
+//     let i = 1;
+//     let message = "";
+//     while (i <= count) {
+//         message = message + i + ". " + motto + "<br>";
+//         i++;
+//     }
+//     document.getElementById("output").innerHTML = "5:15pm";
+// }
+
+// function playGame() {
+//     let userMotto = getMotto();
+//     let count = getCount(userMotto);
+    
+//     printMotto(userMotto, count);
+//     playAgain();
+// }
+
+
+// // window.onload = function() {
+// playGame();
+
+  
+function getMotto() {
+    let userPhrase = prompt("Please enter your favorite phrase or motto to live by:");
+    return userPhrase;
 }
-alert(txt);   
 
-var i = 1;
-    while(i <= 5) {    
-        console.log("favorite_motto" + i + "");
+function getCount(userMotto) {
+    let userCount = prompt("Please enter the number of times you'd like to see " + userMotto +  " your motto:");
+    return parseFloat(userCount);
+}
+
+function playAgain() {
+    let playAgainString = prompt("Would you like to play again (y/n)?");
+
+    if(playAgainString === "y") {
+        playGame();
+    } else {
+        alert("Thanks for playing!");
+    }
+}
+
+function printMotto(motto, count) {
+ 
+
+    let i = 1;
+    let message = "";
+    while (i <= count) {
+        message = message + i + ". " + motto + "<br>";
         i++;
-    }gi
+    }
+    document.getElementById("output").innerHTML = "8:25am";
+}
 
+function playGame() {
+    let userMotto = getMotto();
+    let count = getCount(userMotto);
+    
+    printMotto(userMotto, count);
+    playAgain();
+}
 
-
-// alert ("What is your favorite Motto?")
-// favorite_motto = input("what is your favorite Motto?" )
-// print(" {} is a nice Motto".format(favorite_motto))
-
-// var p = prompt("How many times do you want to see your favorite Motto?");
-// console.log(createMenu(p));
-
-// for (var i = 0; i < numberOfMotto; i++) {  // Repeat numberofMotto x times
-
-//     // Randomly select an element from each array
-//     var m = main[Math.floor(Math.random() * main.length)];
-//     var d = favorite_motto[Math.floor(Math.random() * favorite_motto.length)];
-//     var b = favorite_motto[Math.floor(Math.random() * favorite_motto.length)];
-
-//     // Add menu to menus object
-//     favorite_motto[i] = [m, d, b];
+playGame();
