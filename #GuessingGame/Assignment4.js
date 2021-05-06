@@ -1,6 +1,6 @@
 function submitData() {
-    const min_value = document.getElementById("min-number").value;
-    const max_value = document.getElementById("max-number").value;
+    const min_value = parseInt(document.getElementById("min-number").value);
+    const max_value = parseInt(document.getElementById("max-number").value);
 
 if (min_value == "" || max_value == "") {
     updateDom("Your number is not valid! Please enter a value in both inputs.", "red");
@@ -27,7 +27,7 @@ if (min_value >= max_value) {
 numberGuessGame(parseInt(min_value), parseInt(max_value))
 
 }
-function updateDOM(value, color) {
+function updateDom(value, color) {
     document.getElementById("output").innerHTML = value; //make sure you have a div in your html file with id of output.
     document.getElementById("output").style.color = color;
     //update div color also.
@@ -69,7 +69,7 @@ if (random == randomNumberGenerated){
         if(index < guessedItemsString.length-1){comma=","}
         guessedItemsString = guessedItemsString+item+comma;
     })
-    updateDOM("Congratulations, your smart!! " +randomNumberGenerated + " is correct! It only took you " + attempts + " guesses.<br />"+guessedItemsString, "green");
+    updateDom("Congratulations, your smart!! " +randomNumberGenerated + " is correct! It only took you " + attempts + " guesses.<br />"+guessedItemsString, "green");
 }
     } while (random !=randomNumberGenerated)
 }
@@ -122,6 +122,6 @@ function randomNumber(min, max) {
 //             // if too high, modify message to say that they guess is too high
 //         } while(..guess is wrong..)
 //         // modify message to say congratulations!!!
-//         updateDOM(message, "green");
+//         updateDom(message, "green");
 //     }
                     
